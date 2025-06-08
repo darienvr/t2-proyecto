@@ -200,7 +200,12 @@
 
                             <!-- Tabla principal -->
                             <div  class="border border-gray-400" ref="tablaActividades">
-                                <table class="border-collapse" role="grid">
+                                <table class="border-collapse">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
                                     <tbody>
                                         <tr v-for="piso in [...Array(activity.pisos).keys()].map(n => n + 1).reverse()" 
                                             :key="'piso-' + piso">
