@@ -643,24 +643,30 @@ export default {
             this.errorLogs = '';
             this.progressColor = 'rgb(0 43 107)';
         },
-        uploadDocument(){
-            this.actividades = [
-                { id: 1, name: "Winchado de tuberias"},
-                { id: 2, name: "PICOTEO Y COLOCACION DE PUNTOS EN LOSA"},
-                { id: 3, name: "TARRAJEO DE TECHO"},
-                { id: 4, name: "TARRAJEO DE VERTICALES Y DERRAMES"},
-                { id: 5, name: "TRAZOS PARA ALBAÑILERIA INTERIOR"},
-                { id: 6, name: "LEVANTAMIENTO DE PUNTOS ELECTRICOS"},
-                { id: 7, name: "TUBERIAS COLGADAS IISS (DESAGUE Y AGUA))"},
-                { id: 8, name: "ANCLAJE DE REFUERZOS PARA ALBAÑILERIA INTERIOR"},
-                { id: 9, name: "ASENTADO DE ALBAÑILERIA INTERIOR"},
-                { id: 10, name: "FIJACION DE PUNTOS SANITARIOS"},
-                { id: 11, name: "FIJACION DE PUNTOS SANITARIOS(MEZCLADORAS)"},
-                { id: 12, name: "INSTALACION DE DUCTOS MECANICOS"},
-                { id: 13, name: "REMATES DE ASENTADO DE ALBAÑILERIA"},
-                { id: 14, name: "SELLO CORTAFUEGO EN TABIQUERIA"},
-                { id: 15, name: "DRYWALL (1ER PERFILERIA+ 1ERA CARA)"},
+        uploadDocument() {
+            const actividadesData = [
+                "Winchado de tuberías",
+                "PICOTEO Y COLOCACION DE PUNTOS EN LOSA",
+                "TARRAJEO DE TECHO",
+                "TARRAJEO DE VERTICALES Y DERRAMES",
+                "TRAZOS PARA ALBAÑILERIA INTERIOR",
+                "LEVANTAMIENTO DE PUNTOS ELECTRICOS",
+                "TUBERIAS COLGADAS IISS (DESAGUE Y AGUA)",
+                "ANCLAJE DE REFUERZOS PARA ALBAÑILERIA INTERIOR",
+                "ASENTADO DE ALBAÑILERIA INTERIOR",
+                "FIJACION DE PUNTOS SANITARIOS",
+                "FIJACION DE PUNTOS SANITARIOS(MEZCLADORAS)",
+                "INSTALACION DE DUCTOS MECANICOS",
+                "REMATES DE ASENTADO DE ALBAÑILERIA",
+                "SELLO CORTAFUEGO EN TABIQUERIA",
+                "DRYWALL (1ER PERFILERIA+ 1ERA CARA)"
             ];
+            
+            this.actividades = actividadesData.map((name, index) => ({
+                id: index + 1,
+                name: name
+            }));
+        
             this.successFileProcess = true;
         },
         handleInputNewSector() {
